@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "article_id": "test_art_001",
+    "article_title": "Drinking Lemon Water Cures Cancer",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Medical consensus explicitly disproves this claim.",
+    "analyst_name": "Senior Fact-Checker (VISTAS)",
+    "timestamp": "2026-09-27T20:06:39.607472"
+  },
+  {
+    "id": 2,
+    "article_id": "art_test_123",
+    "article_title": "Emergency Wealth Transfer Announced",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Phishing financial scam.",
+    "analyst_name": "Lead Examiner",
+    "timestamp": "2026-09-27T20:06:39.671288"
+  },
+  {
+    "id": 3,
+    "article_id": "test_art_001",
+    "article_title": "Drinking Lemon Water Cures Cancer",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Medical consensus explicitly disproves this claim.",
+    "analyst_name": "Senior Fact-Checker (VISTAS)",
+    "timestamp": "2026-09-27T20:12:45.287695"
+  },
+  {
+    "id": 4,
+    "article_id": "art_test_123",
+    "article_title": "Emergency Wealth Transfer Announced",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Phishing financial scam.",
+    "analyst_name": "Lead Examiner",
+    "timestamp": "2026-09-27T20:12:45.347194"
+  },
+  {
+    "id": 5,
+    "article_id": "test_art_001",
+    "article_title": "Drinking Lemon Water Cures Cancer",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Medical consensus explicitly disproves this claim.",
+    "analyst_name": "Senior Fact-Checker (VISTAS)",
+    "timestamp": "2026-09-27T20:14:48.143321"
+  },
+  {
+    "id": 6,
+    "article_id": "art_test_123",
+    "article_title": "Emergency Wealth Transfer Announced",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Phishing financial scam.",
+    "analyst_name": "Lead Examiner",
+    "timestamp": "2026-09-27T20:14:48.202060"
+  },
+  {
+    "id": 7,
+    "article_id": "test_art_001",
+    "article_title": "Drinking Lemon Water Cures Cancer",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Medical consensus explicitly disproves this claim.",
+    "analyst_name": "Senior Fact-Checker (VISTAS)",
+    "timestamp": "2026-09-28T08:51:50.126163"
+  },
+  {
+    "id": 8,
+    "article_id": "art_test_123",
+    "article_title": "Emergency Wealth Transfer Announced",
+    "model_prediction": "REAL",
+    "corrected_label": "FAKE",
+    "notes": "Phishing financial scam.",
+    "analyst_name": "Lead Examiner",
+    "timestamp": "2026-09-28T08:51:50.182162"
+  }
+]

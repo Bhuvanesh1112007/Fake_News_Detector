@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriShield — News Verification & Explainable AI</title>
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Professional Design System -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Minimal Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            
+            <!-- Brand -->
+            <a href="#" class="brand-wrapper" onclick="switchTab('detector'); return false;">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-shield"></i>
+                </div>
+                <span class="brand-title">VeriShield</span>
+                <span class="brand-tag">Research v2.1</span>
+            </a>
+
+            <!-- Segmented Navigation Tabs -->
+            <nav class="nav-tabs-wrapper">
+                <button type="button" onclick="switchTab('detector')" id="tab-btn-detector" class="nav-tab active">
+                    <i class="fa-regular fa-compass"></i>
+                    <span>Detector</span>
+                </button>
+                <button type="button" onclick="switchTab('threat')" id="tab-btn-threat" class="nav-tab">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Threat Feed</span>
+                </button>
+                <button type="button" onclick="switchTab('simulator')" id="tab-btn-simulator" class="nav-tab">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Spread Sim</span>
+                </button>
+                <button type="button" onclick="switchTab('adversarial')" id="tab-btn-adversarial" class="nav-tab">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Stress Lab</span>
+                </button>
+                <button type="button" onclick="switchTab('drift')" id="tab-btn-drift" class="nav-tab">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span>Active Learning</span>
+                </button>
+                <button type="button" onclick="switchTab('analytics')" id="tab-btn-analytics" class="nav-tab">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Benchmarks</span>
+                </button>
+                <button type="button" onclick="switchTab('history')" id="tab-btn-history" class="nav-tab">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Audit Log</span>
+                </button>
+                <button type="button" onclick="switchTab('team')" id="tab-btn-team" class="nav-tab">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>About</span>
+                </button>
+            </nav>
+
+            <!-- Theme Toggle Button -->
+            <button type="button" onclick="toggleTheme()" id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Light/Dark Theme">
+                <i id="theme-icon" class="fa-regular fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container" style="flex: 1; padding-top: 1.5rem; padding-bottom: 2.5rem;">
+
+        <!-- ================= TAB 1: DETECTOR ================= -->
+        <section id="tab-detector" class="tab-pane active">
+            
+            <!-- Quick Example Links -->
+            <div class="samples-bar">
+                <span class="samples-label">Examples:</span>
+                <button type="button" onclick="loadSample('real_nasa')" class="sample-link">NASA Deep Field (Real)</button>
+                <button type="button" onclick="loadSample('real_fed')" class="sample-link">Federal Reserve Policy (Real)</button>
+                <button type="button" onclick="loadSample('fake_conspiracy')" class="sample-link">Satellite Mind Control (Fake)</button>
+                <button type="button" onclick="loadSample('fake_cure')" class="sample-link">Lemon Peel Cure (Fake)</button>
+                <button type="button" onclick="loadSample('ta_fake_cure')" class="sample-link">தமிழ் (Tamil)</button>
+                <button type="button" onclick="loadSample('hi_fake_money')" class="sample-link">हिन्दी (Hindi)</button>
+            </div>
+
+            <!-- Workspace: Form & Results -->
+            <div class="grid-2">
+                
+                <!-- Left: Form Input -->
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    
+                    <!-- URL Fetcher -->
+                    <div class="card" style="padding: 0.75rem 1rem;">
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <input type="url" id="input-url" placeholder="Paste article URL to auto-extract and verify..." class="input-text" style="font-size: 0.8125rem;">
+                            <button type="button" onclick="handleURLPrediction()" id="btn-fetch-url" class="btn btn-secondary btn-sm" style="white-space: nowrap;">
+                                <span>Fetch & Verify</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Article Input Form -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h2 class="card-title">Article Verification</h2>
+                                <p class="card-description">79-dimensional multimodal feature fusion & BERT contextual embeddings.</p>
+                            </div>
+                            <button type="button" onclick="clearInputs()" class="btn btn-ghost btn-sm">Clear</button>
+                        </div>
+
+                        <form id="predict-form" onsubmit="handlePrediction(event)">
+                            <div class="form-group">
+                                <label class="form-label" for="input-title">Headline / Title</label>
+                                <input type="text" id="input-title" required placeholder="Enter article headline..." class="input-text">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="input-text">Article Text</label>
+                                <textarea id="input-text" required placeholder="Paste the news story or claim body text here..." class="input-textarea"></textarea>
+                            </div>
+
+                            <div class="grid-3" style="margin-bottom: 1.25rem;">
+                                <div>
+                                    <label class="form-label" for="input-source">Publisher Source</label>
+                                    <input type="text" id="input-source" placeholder="e.g. Reuters, Blog" class="input-text" style="font-size: 0.8125rem;">
+                                </div>
+                                <div>
+                                    <label class="form-label" for="input-author">Author / Byline</label>
+                                    <input type="text" id="input-author" placeholder="e.g. Dr. Jane Doe" class="input-text" style="font-size: 0.8125rem;">
+                                </div>
+                                <div>
+                                    <label class="form-label" for="input-shares">Social Shares</label>
+                                    <input type="number" id="input-shares" value="1500" min="0" class="input-text" style="font-size: 0.8125rem;">
+                                </div>
+                            </div>
+
+                            <button type="submit" id="btn-submit" class="btn btn-primary" style="width: 100%; padding: 0.625rem 1rem;">
+                                <span>Verify Authenticity</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--text-dim); padding: 0 0.25rem;">
+                        <span>BERT Transformer (64-d) + Random Forest Ensemble</span>
+                        <span>Persistent Storage Active</span>
+                    </div>
+                </div>
+
+                <!-- Right: Analysis Output -->
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    
+                    <!-- Awaiting Submission Placeholder -->
+                    <div id="results-placeholder" class="card" style="min-height: 440px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-style: dashed; padding: 2.5rem 1.5rem;">
+                        <div style="width: 36px; height: 36px; border-radius: var(--radius-md); background: var(--bg-surface-raised); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); margin-bottom: 0.875rem;">
+                            <i class="fa-regular fa-newspaper"></i>
+                        </div>
+                        <h3 style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary);">Awaiting Article Submission</h3>
+                        <p style="font-size: 0.8125rem; color: var(--text-muted); max-width: 320px; margin-top: 0.25rem; line-height: 1.5;">
+                            Submit an article or pick an example above to compute credibility probability, SHAP attributions, and BERT attention weights.
+                        </p>
+                    </div>
+
+                    <!-- Active Analysis Results Card -->
+                    <div id="results-card" class="card" style="display: none; flex-direction: column; gap: 1.25rem;">
+                        
+                        <!-- Verdict Status Banner -->
+                        <div id="verdict-banner" class="verdict-banner verdict-real">
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div id="verdict-icon-container" style="font-size: 1.25rem;">
+                                    <i id="verdict-icon" class="fa-solid fa-check verdict-icon"></i>
+                                </div>
+                                <div>
+                                    <div style="display: flex; align-items: center; gap: 0.375rem;">
+                                        <span id="verdict-badge" class="verdict-badge">Verified Authentic</span>
+                                        <span id="risk-category" style="font-size: 0.75rem; color: var(--text-secondary);"></span>
+                                    </div>
+                                    <h3 id="verdict-title" style="font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin-top: 0.125rem;">Classified as REAL News</h3>
+                                    <span id="firebase-sync-badge" style="font-size: 0.6875rem; color: var(--text-muted); display: inline-block; margin-top: 0.25rem;"></span>
+                                </div>
+                            </div>
+
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.6875rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Confidence</div>
+                                <div id="confidence-percentage" style="font-size: 1.625rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono);">88.4%</div>
+                                <div id="confidence-sub" style="font-size: 0.6875rem; color: var(--text-muted);">Credibility Score</div>
+                            </div>
+                        </div>
+
+                        <!-- Action Toolbar -->
+                        <div class="grid-4">
+                            <button type="button" onclick="downloadCurrentAuditReport()" class="btn btn-secondary btn-sm">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <span>Export Audit</span>
+                            </button>
+                            <button type="button" onclick="openFeedbackModal()" class="btn btn-secondary btn-sm">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                                <span>Feedback</span>
+                            </button>
+                            <button type="button" onclick="launchPropagationForCurrent()" class="btn btn-secondary btn-sm">
+                                <i class="fa-solid fa-diagram-project"></i>
+                                <span>Spread Sim</span>
+                            </button>
+                            <button type="button" onclick="launchAdversarialAuditForCurrent()" class="btn btn-secondary btn-sm">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Stress Test</span>
+                            </button>
+                        </div>
+
+                        <!-- Token Attribution & BERT Self-Attention Heatmap -->
+                        <div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary);">Token Attribution & BERT Attention</span>
+                                <div style="display: flex; gap: 0.75rem; font-size: 0.6875rem; color: var(--text-muted);">
+                                    <span style="display: flex; align-items: center; gap: 0.25rem;"><span style="width: 8px; height: 8px; background: var(--token-fake-bg); border: 1px solid var(--token-fake-border); border-radius: 2px;"></span> Fake Signal</span>
+                                    <span style="display: flex; align-items: center; gap: 0.25rem;"><span style="width: 8px; height: 8px; background: var(--token-real-bg); border: 1px solid var(--token-real-border); border-radius: 2px;"></span> Credible</span>
+                                    <span style="display: flex; align-items: center; gap: 0.25rem;"><span style="width: 8px; height: 8px; background: var(--token-attn-bg); border: 1px dashed var(--token-attn-border); border-radius: 2px;"></span> High Focus</span>
+                                </div>
+                            </div>
+                            <div id="token-heatmap-container" class="token-container"></div>
+                        </div>
+
+                        <!-- SHAP Influences -->
+                        <div>
+                            <span style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 0.5rem;">Key Feature Contributions (SHAP)</span>
+                            <div id="feature-impact-list" style="display: flex; flex-direction: column; gap: 0.375rem;"></div>
+                        </div>
+
+                        <!-- Reasoning Summary -->
+                        <div style="background: var(--bg-surface-raised); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 0.875rem;">
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.03em;">Model Explanation</span>
+                            <ul id="reasons-list" style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.375rem; padding-left: 1.125rem; display: flex; flex-direction: column; gap: 0.25rem;"></ul>
+                        </div>
+
+                        <!-- 79-Dim Modality Balance Chart -->
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary);">Multimodal Modality Profile</span>
+                                <span style="font-size: 0.6875rem; color: var(--text-muted);">4 Modality Clusters</span>
+                            </div>
+                            <div style="height: 190px; position: relative;">
+                                <canvas id="multimodalRadarChart"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= TAB 2: THREAT RADAR ================= -->
+        <section id="tab-threat" class="tab-pane">
+            
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <h2 class="card-title">Live Misinformation Stream</h2>
+                            <span id="threat-status-badge" class="brand-badge">Nominal Status</span>
+                        </div>
+                        <p class="card-description">Automated background inference across monitored public news wires.</p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="text-align: right;">
+                            <div style="font-size: 0.6875rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Threat Index</div>
+                            <div id="mti-score" style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono);">--</div>
+                            <div id="mti-updated" style="font-size: 0.6875rem; color: var(--text-dim);">Last sync: Just now</div>
+                        </div>
+                        <button type="button" onclick="fetchThreatStream(true)" id="btn-refresh-threat" class="btn btn-secondary btn-sm" title="Refresh Feed">
+                            <i class="fa-solid fa-rotate"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid-4" style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <div class="stat-box">
+                        <div class="stat-label">Monitored Items</div>
+                        <div id="threat-stat-monitored" class="stat-value">--</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Flagged Misinformation</div>
+                        <div id="threat-stat-fake" class="stat-value" style="color: var(--status-fake-text);">--</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Verified Authentic</div>
+                        <div id="threat-stat-real" class="stat-value" style="color: var(--status-real-text);">--</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Processing Latency</div>
+                        <div class="stat-value" style="color: var(--text-secondary);">&lt; 15 ms</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Ingested Wire Articles</h3>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Real-time stream</span>
+                </div>
+                <div id="threat-feed-container" style="display: flex; flex-direction: column; gap: 0.625rem;"></div>
+            </div>
+
+        </section>
+
+        <!-- ================= TAB 3: SPREAD SIMULATOR ================= -->
+        <section id="tab-simulator" class="tab-pane">
+            
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <h2 class="card-title">Network Diffusion Simulator</h2>
+                            <span id="sim-cascade-badge" class="brand-badge">Epidemic Model</span>
+                        </div>
+                        <p class="card-description">SIR and Independent Cascade rumor propagation across scale-free social graphs.</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <div style="font-size: 0.6875rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Reproduction Number (R₀)</div>
+                        <div id="sim-r0-score" style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono);">2.68</div>
+                        <div id="sim-reach-pct" style="font-size: 0.6875rem; color: var(--text-dim);">Total Reach: 82.4%</div>
+                    </div>
+                </div>
+
+                <div class="grid-3" style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); align-items: flex-end;">
+                    <div style="grid-column: span 1;">
+                        <label class="form-label" for="sim-input-headline">Headline to Simulate</label>
+                        <input type="text" id="sim-input-headline" value="Secret 5G Frequencies Confirmed to Control Thoughts" class="input-text">
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                            <label class="form-label" for="sim-nodes-slider" style="margin: 0;">Network Nodes</label>
+                            <span id="val-sim-nodes" style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-primary);">35</span>
+                        </div>
+                        <input type="range" id="sim-nodes-slider" min="15" max="65" value="35" oninput="document.getElementById('val-sim-nodes').textContent = this.value" style="width: 100%; accent-color: var(--text-primary);">
+                    </div>
+                    <div>
+                        <button type="button" onclick="runPropagationSimulation()" id="btn-run-sim" class="btn btn-primary" style="width: 100%;">
+                            <span>Simulate Spread</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Scale-Free Network Topology</h3>
+                        <div style="display: flex; gap: 0.75rem; font-size: 0.6875rem; color: var(--text-muted);">
+                            <span style="display: flex; align-items: center; gap: 0.25rem;"><span style="width: 8px; height: 8px; background: #dc2626; border-radius: 50%;"></span> Infected</span>
+                            <span style="display: flex; align-items: center; gap: 0.25rem;"><span style="width: 8px; height: 8px; background: #2563eb; border-radius: 50%;"></span> Fact-Checked</span>
+                            <span style="display: flex; align-items: center; gap: 0.25rem;"><span style="width: 8px; height: 8px; background: #94a3b8; border-radius: 50%;"></span> Susceptible</span>
+                        </div>
+                    </div>
+                    <div style="background: var(--bg-surface-raised); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                        <canvas id="propagationCanvas" width="560" height="300" style="width: 100%; max-height: 300px;"></canvas>
+                    </div>
+                </div>
+
+                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 class="card-title" style="margin-bottom: 1rem;">Epidemic Parameters</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.8125rem;">
+                            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; background: var(--bg-surface-raised); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                                <span style="color: var(--text-secondary);">Transmission Rate (β)</span>
+                                <span id="sim-param-beta" style="font-family: var(--font-mono); color: var(--status-fake-text); font-weight: 600;">0.825</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; background: var(--bg-surface-raised); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                                <span style="color: var(--text-secondary);">Containment Rate (γ)</span>
+                                <span id="sim-param-gamma" style="font-family: var(--font-mono); color: #2563eb; font-weight: 600;">0.122</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; background: var(--bg-surface-raised); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                                <span style="color: var(--text-secondary);">Infected Active Nodes</span>
+                                <span id="sim-param-infected" style="font-family: var(--font-mono); color: var(--text-primary); font-weight: 600;">--</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; background: var(--bg-surface-raised); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                                <span style="color: var(--text-secondary);">Fact-Checked Immune</span>
+                                <span id="sim-param-factchecked" style="font-family: var(--font-mono); color: var(--text-primary); font-weight: 600;">--</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+                        Misinformation spreads exponentially across scale-free social topologies when authoritative counter-narratives are delayed.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= TAB 4: ADVERSARIAL STRESS LAB ================= -->
+        <section id="tab-adversarial" class="tab-pane">
+            
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <h2 class="card-title">Adversarial Robustness Testing</h2>
+                            <span id="adv-grade-badge" class="brand-badge">Tier 1 Robustness</span>
+                        </div>
+                        <p class="card-description">Stress-tests the pipeline against homoglyphs, zero-width evasion, and synonym perturbation.</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <div style="font-size: 0.6875rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Robustness Score</div>
+                        <div id="adv-ars-score" style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono);">92.4%</div>
+                        <div id="adv-evasion-stat" style="font-size: 0.6875rem; color: var(--text-dim);">4/4 Attacks Defended</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); flex-wrap: wrap;">
+                    <input type="text" id="adv-input-headline" value="Miracle Cancer Cure Discovered: Boiled Lemon Peels Cure 100% Overnight" class="input-text" style="flex: 1; min-width: 260px;">
+                    <button type="button" onclick="runAdversarialStressTest()" id="btn-run-adv" class="btn btn-primary">
+                        <span>Run 4-Vector Attack Test</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Attack Vectors & Stability Breakdown</h3>
+                </div>
+                <div class="table-container">
+                    <table class="table-minimal">
+                        <thead>
+                            <tr>
+                                <th>Attack Vector</th>
+                                <th>Perturbed Headline</th>
+                                <th>Prediction</th>
+                                <th>Confidence Shift</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adv-attacks-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= TAB 5: ACTIVE LEARNING & DRIFT ================= -->
+        <section id="tab-drift" class="tab-pane">
+            
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h2 class="card-title">Active Learning & Distribution Drift</h2>
+                        <p class="card-description">Population Stability Index (PSI) monitoring across 79 multimodal dimensions.</p>
+                    </div>
+                    <button type="button" onclick="fetchActiveLearningStats()" class="btn btn-secondary btn-sm">
+                        <i class="fa-solid fa-rotate"></i>
+                        <span>Refresh Telemetry</span>
+                    </button>
+                </div>
+
+                <div class="grid-3" style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <div class="stat-box">
+                        <div class="stat-label">Population Stability Index</div>
+                        <div id="drift-psi-score" class="stat-value" style="color: var(--status-real-text);">--</div>
+                        <div id="drift-psi-status" class="stat-subtext">Stable (PSI &lt; 0.10)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Human Corrections</div>
+                        <div id="drift-feedback-count" class="stat-value">--</div>
+                        <div class="stat-subtext">Fact-checker annotations</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Retrain Pipeline Readiness</div>
+                        <div id="drift-retrain-pct" class="stat-value">--%</div>
+                        <div id="drift-retrain-status" class="stat-subtext">Awaiting threshold</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Fact-Checker Feedback</h3>
+                </div>
+                <div class="table-container">
+                    <table class="table-minimal">
+                        <thead>
+                            <tr>
+                                <th>Article Title</th>
+                                <th>Model Output</th>
+                                <th>Corrected Label</th>
+                                <th>Analyst Notes</th>
+                                <th>Timestamp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="feedback-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= TAB 6: BENCHMARKS & ANALYTICS ================= -->
+        <section id="tab-analytics" class="tab-pane">
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">Model Comparative Benchmarks</h2>
+                        <p class="card-description">Empirical evaluation of BERT Transformer Multimodal Fusion against baseline algorithms.</p>
+                    </div>
+                    <span class="brand-badge">Validated Results</span>
+                </div>
+
+                <div class="table-container">
+                    <table class="table-minimal">
+                        <thead>
+                            <tr>
+                                <th>Model Architecture</th>
+                                <th>Accuracy</th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                                <th>F1-Score</th>
+                                <th>ROC-AUC</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody id="metrics-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="card-title" style="margin-bottom: 1rem;">Accuracy & F1-Score Comparison</h3>
+                    <div style="height: 240px; position: relative;">
+                        <canvas id="chart-models-comparison"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title" style="margin-bottom: 1rem;">Global SHAP Feature Importance</h3>
+                    <div style="height: 240px; position: relative;">
+                        <canvas id="chart-feature-importance"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= TAB 7: AUDIT LOG ================= -->
+        <section id="tab-history" class="tab-pane">
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">Prediction Audit Log</h2>
+                        <p class="card-description">Persistent records of all processed verification requests.</p>
+                    </div>
+                    <button type="button" onclick="fetchHistory()" class="btn btn-secondary btn-sm">
+                        <i class="fa-solid fa-rotate"></i>
+                        <span>Refresh Log</span>
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="table-minimal">
+                        <thead>
+                            <tr>
+                                <th>Record ID</th>
+                                <th>Article Title</th>
+                                <th>Source</th>
+                                <th>Architecture</th>
+                                <th>Verdict</th>
+                                <th>Confidence</th>
+                                <th>Timestamp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= TAB 8: ABOUT & TEAM ================= -->
+        <section id="tab-team" class="tab-pane">
+            
+            <div class="card">
+                <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);">
+                    <span class="brand-badge" style="margin-bottom: 0.5rem;">Academic Research Project</span>
+                    <h2 style="font-size: 1.125rem; font-weight: 700; color: var(--text-primary); margin-top: 0.25rem; line-height: 1.4;">
+                        Hybrid Deep Learning Model for Fake News Detection Using BERT Multimodal Features, Explainable AI and Firebase
+                    </h2>
+                    <p style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.25rem;">
+                        Department of Computer Science and Engineering, Vels Institute of Science, Technology & Advanced Studies (VISTAS)
+                    </p>
+                </div>
+
+                <div style="background: var(--bg-surface-raised); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.5rem;">
+                    <span style="font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">Abstract</span>
+                    <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
+                        Digital misinformation poses critical challenges to information integrity. This system implements a hybrid deep learning architecture combining 64-dimensional BERT transformer contextual embeddings with stylometric, source credibility, and network diffusion features (79 dimensions total). Inferences are coupled with dual Explainable AI (SHAP attributions and token-level self-attention heatmaps) and continuous concept drift telemetry.
+                    </p>
+                </div>
+
+                <h3 style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem;">Research Team</h3>
+                <div class="grid-3">
+                    <div class="stat-box" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary);">Mohamed Irfaan M</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.125rem;">AI Model Development & Lead</div>
+                            <div style="font-size: 0.6875rem; color: var(--text-dim); margin-top: 0.25rem; font-family: var(--font-mono);">24619122@vistas.ac.in</div>
+                        </div>
+                        <div style="font-size: 0.6875rem; color: var(--text-muted); margin-top: 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border);">
+                            BERT transformer embeddings, Multimodal Classifier, and Benchmark Evaluations.
+                        </div>
+                    </div>
+
+                    <div class="stat-box" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary);">Bhuvanesh M</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.125rem;">Data Engineering & Backend</div>
+                            <div style="font-size: 0.6875rem; color: var(--text-dim); margin-top: 0.25rem; font-family: var(--font-mono);">24619104@vistas.ac.in</div>
+                        </div>
+                        <div style="font-size: 0.6875rem; color: var(--text-muted); margin-top: 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border);">
+                            Dataset curation, Firebase Firestore persistence, and FastAPI REST endpoints.
+                        </div>
+                    </div>
+
+                    <div class="stat-box" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary);">Harish Hariharan MU</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.125rem;">Frontend & Explainability</div>
+                            <div style="font-size: 0.6875rem; color: var(--text-dim); margin-top: 0.25rem; font-family: var(--font-mono);">Dept. of CSE, VISTAS</div>
+                        </div>
+                        <div style="font-size: 0.6875rem; color: var(--text-muted); margin-top: 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border);">
+                            Interactive dashboard interface, BERT attention heatmaps, and SHAP visualizations.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer style="border-top: 1px solid var(--border); padding: 1.25rem 0; font-size: 0.75rem; color: var(--text-muted); text-align: center; background: var(--bg-surface);">
+        <div class="container">
+            © 2026 Vels Institute of Science, Technology & Advanced Studies (VISTAS) · Department of Computer Science & Engineering
+        </div>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal-dialog">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);">
+                <h3 style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary);">Fact-Checker Annotation</h3>
+                <button type="button" onclick="closeFeedbackModal()" class="btn btn-ghost btn-sm" style="padding: 0.25rem 0.5rem;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label" for="feedback-title">Article Title</label>
+                    <input type="text" id="feedback-title" readonly class="input-text" style="color: var(--text-muted); background: var(--bg-surface-raised);">
+                </div>
+
+                <div class="grid-2-sm" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.875rem;">
+                    <div>
+                        <label class="form-label" for="feedback-model-pred">Model Output</label>
+                        <input type="text" id="feedback-model-pred" readonly class="input-text" style="color: var(--text-muted); background: var(--bg-surface-raised); font-weight: 600;">
+                    </div>
+                    <div>
+                        <label class="form-label" for="feedback-correct-label">Ground Truth</label>
+                        <select id="feedback-correct-label" required class="input-select">
+                            <option value="REAL">REAL (Authentic)</option>
+                            <option value="FAKE">FAKE (Misinformation)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="feedback-analyst">Analyst / Evaluator</label>
+                    <input type="text" id="feedback-analyst" value="Fact-Checker (VISTAS)" class="input-text">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="feedback-notes">Verification Notes</label>
+                    <textarea id="feedback-notes" rows="3" placeholder="Provide context, references, or verified sources..." class="input-textarea" style="min-height: 80px;"></textarea>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--border);">
+                    <button type="button" onclick="closeFeedbackModal()" class="btn btn-secondary btn-sm">Cancel</button>
+                    <button type="submit" id="btn-submit-feedback" class="btn btn-primary btn-sm">Submit Annotation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Application Controller Script -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+{
+  "benchmark_metrics": {
+    "Proposed Hybrid (BERT + RF)": {
+      "accuracy": 0.7778,
+      "precision": 0.7778,
+      "recall": 0.7778,
+      "f1_score": 0.7778,
+      "roc_auc": 0.95,
+      "confusion_matrix": [
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "architecture_type": "Hybrid Deep Learning (BERT Embeddings + Multimodal Ensemble)"
+    },
+    "BERT Deep Learning (MLP)": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "architecture_type": "Pure Deep Neural Network (BERT Contextual + Dense Layers)"
+    },
+    "Logistic Regression": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "architecture_type": "Classical Machine Learning Baseline"
+    },
+    "Decision Tree": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "architecture_type": "Classical Machine Learning Baseline"
+    },
+    "Support Vector Machine (RBF)": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "architecture_type": "Classical Machine Learning Baseline"
+    },
+    "Naive Bayes": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "architecture_type": "Classical Machine Learning Baseline"
+    },
+    "Gradient Boosting (GBM)": {
+      "accuracy": 0.5556,
+      "precision": 0.5556,
+      "recall": 0.5556,
+      "f1_score": 0.5556,
+      "roc_auc": 0.8,
+      "confusion_matrix": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "architecture_type": "Classical Machine Learning Baseline"
+    }
+  },
+  "global_feature_importance": [
+    {
+      "feature": "Emotional Intensity",
+      "raw_name": "emotional_intensity",
+      "importance": 0.1127,
+      "category": "Linguistic & Deception Signal"
+    },
+    {
+      "feature": "Sentiment Polarity",
+      "raw_name": "sentiment_polarity",
+      "importance": 0.0933,
+      "category": "Linguistic & Deception Signal"
+    },
+    {
+      "feature": "Bert Contextual Dim 31",
+      "raw_name": "bert_contextual_dim_31",
+      "importance": 0.0877,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Body Exclamations",
+      "raw_name": "body_exclamations",
+      "importance": 0.081,
+      "category": "Linguistic & Deception Signal"
+    },
+    {
+      "feature": "Bert Contextual Dim 24",
+      "raw_name": "bert_contextual_dim_24",
+      "importance": 0.0597,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Bert Contextual Dim 53",
+      "raw_name": "bert_contextual_dim_53",
+      "importance": 0.0535,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Deception Lexical Density",
+      "raw_name": "deception_lexical_density",
+      "importance": 0.0513,
+      "category": "Linguistic & Deception Signal"
+    },
+    {
+      "feature": "Bert Contextual Dim 25",
+      "raw_name": "bert_contextual_dim_25",
+      "importance": 0.0369,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Source Credibility Score",
+      "raw_name": "source_credibility_score",
+      "importance": 0.0356,
+      "category": "Linguistic & Deception Signal"
+    },
+    {
+      "feature": "Bert Contextual Dim 41",
+      "raw_name": "bert_contextual_dim_41",
+      "importance": 0.0343,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Bert Contextual Dim 46",
+      "raw_name": "bert_contextual_dim_46",
+      "importance": 0.0253,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Bert Contextual Dim 48",
+      "raw_name": "bert_contextual_dim_48",
+      "importance": 0.0246,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Bert Contextual Dim 2",
+      "raw_name": "bert_contextual_dim_2",
+      "importance": 0.0237,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Bert Contextual Dim 49",
+      "raw_name": "bert_contextual_dim_49",
+      "importance": 0.0211,
+      "category": "BERT Deep Semantic Feature"
+    },
+    {
+      "feature": "Bert Contextual Dim 45",
+      "raw_name": "bert_contextual_dim_45",
+      "importance": 0.0192,
+      "category": "BERT Deep Semantic Feature"
+    }
+  ],
+  "feature_count": 79,
+  "bert_embedding_dim": 64,
+  "training_samples": 26,
+  "test_samples": 9,
+  "database": "Firebase Firestore"
+}

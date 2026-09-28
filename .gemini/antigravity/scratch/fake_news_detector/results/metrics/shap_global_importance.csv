@@ -1,0 +1,80 @@
+Rank,Feature Name,Raw Key,SHAP Importance Weight,Importance Share (%),Modality
+1,Share Velocity Proxy,share_velocity_proxy,0.166667,16.67%,Network & Social Engagement
+2,Bert Dim 23,bert_dim_23,0.146667,14.67%,BERT Contextual Sequence
+3,Stylometric Exclamation Density,stylometric_exclamation_density,0.133333,13.33%,Stylometric Linguistic Density
+4,Log Social Shares,log_social_shares,0.133333,13.33%,Network & Social Engagement
+5,Hyper Virality Indicator,hyper_virality_indicator,0.060000,6.00%,Network & Social Engagement
+6,Bert Dim 52,bert_dim_52,0.046667,4.67%,BERT Contextual Sequence
+7,Engagement Anomaly Score,engagement_anomaly_score,0.038889,3.89%,Network & Social Engagement
+8,Emotional Intensity Score,emotional_intensity_score,0.031282,3.13%,Network & Social Engagement
+9,Tld Trust Rating,tld_trust_rating,0.026667,2.67%,User & Publisher Credibility
+10,Author Credential Score,author_credential_score,0.026667,2.67%,User & Publisher Credibility
+11,Bert Dim 16,bert_dim_16,0.020000,2.00%,BERT Contextual Sequence
+12,Bert Dim 01,bert_dim_01,0.020000,2.00%,BERT Contextual Sequence
+13,Publisher Credibility Score,publisher_credibility_score,0.013333,1.33%,User & Publisher Credibility
+14,Bert Dim 44,bert_dim_44,0.013333,1.33%,BERT Contextual Sequence
+15,Bert Dim 30,bert_dim_30,0.007692,0.77%,BERT Contextual Sequence
+16,Bert Dim 31,bert_dim_31,0.006667,0.67%,BERT Contextual Sequence
+17,Bert Dim 29,bert_dim_29,0.006667,0.67%,BERT Contextual Sequence
+18,Bert Dim 19,bert_dim_19,0.006667,0.67%,BERT Contextual Sequence
+19,Bert Dim 03,bert_dim_03,0.006667,0.67%,BERT Contextual Sequence
+20,Bert Dim 25,bert_dim_25,0.006667,0.67%,BERT Contextual Sequence
+21,Bert Dim 15,bert_dim_15,0.006667,0.67%,BERT Contextual Sequence
+22,Bert Dim 56,bert_dim_56,0.006667,0.67%,BERT Contextual Sequence
+23,Bert Dim 62,bert_dim_62,0.006667,0.67%,BERT Contextual Sequence
+24,Bert Dim 43,bert_dim_43,0.006667,0.67%,BERT Contextual Sequence
+25,Bert Dim 40,bert_dim_40,0.006667,0.67%,BERT Contextual Sequence
+26,Bert Dim 32,bert_dim_32,0.006667,0.67%,BERT Contextual Sequence
+27,Bert Dim 20,bert_dim_20,0.006667,0.67%,BERT Contextual Sequence
+28,Bert Dim 50,bert_dim_50,0.006667,0.67%,BERT Contextual Sequence
+29,Bert Dim 48,bert_dim_48,0.006667,0.67%,BERT Contextual Sequence
+30,Bert Dim 47,bert_dim_47,0.006667,0.67%,BERT Contextual Sequence
+31,Bert Dim 60,bert_dim_60,0.006667,0.67%,BERT Contextual Sequence
+32,Bert Dim 07,bert_dim_07,0.006667,0.67%,BERT Contextual Sequence
+33,Bert Dim 57,bert_dim_57,0.001111,0.11%,BERT Contextual Sequence
+34,Bert Dim 59,bert_dim_59,0.001026,0.10%,BERT Contextual Sequence
+35,Is Pseudonymous Author,is_pseudonymous_author,0.000000,0.00%,User & Publisher Credibility
+36,Stylometric Uppercase Ratio,stylometric_uppercase_ratio,0.000000,0.00%,Stylometric Linguistic Density
+37,Stylometric Lexical Diversity,stylometric_lexical_diversity,0.000000,0.00%,Stylometric Linguistic Density
+38,Journalistic Attribution Intensity,journalistic_attribution_intensity,0.000000,0.00%,User & Publisher Credibility
+39,Sentiment Polarity Normalized,sentiment_polarity_normalized,0.000000,0.00%,Network & Social Engagement
+40,Has Author Metadata,has_author_metadata,0.000000,0.00%,User & Publisher Credibility
+41,Bert Dim 51,bert_dim_51,0.000000,0.00%,BERT Contextual Sequence
+42,Bert Dim 54,bert_dim_54,0.000000,0.00%,BERT Contextual Sequence
+43,Bert Dim 53,bert_dim_53,0.000000,0.00%,BERT Contextual Sequence
+44,Bert Dim 49,bert_dim_49,0.000000,0.00%,BERT Contextual Sequence
+45,Bert Dim 58,bert_dim_58,0.000000,0.00%,BERT Contextual Sequence
+46,Bert Dim 63,bert_dim_63,0.000000,0.00%,BERT Contextual Sequence
+47,Bert Dim 61,bert_dim_61,0.000000,0.00%,BERT Contextual Sequence
+48,Bert Dim 33,bert_dim_33,0.000000,0.00%,BERT Contextual Sequence
+49,Bert Dim 34,bert_dim_34,0.000000,0.00%,BERT Contextual Sequence
+50,Bert Dim 35,bert_dim_35,0.000000,0.00%,BERT Contextual Sequence
+51,Bert Dim 36,bert_dim_36,0.000000,0.00%,BERT Contextual Sequence
+52,Bert Dim 38,bert_dim_38,0.000000,0.00%,BERT Contextual Sequence
+53,Bert Dim 37,bert_dim_37,0.000000,0.00%,BERT Contextual Sequence
+54,Bert Dim 39,bert_dim_39,0.000000,0.00%,BERT Contextual Sequence
+55,Bert Dim 41,bert_dim_41,0.000000,0.00%,BERT Contextual Sequence
+56,Bert Dim 46,bert_dim_46,0.000000,0.00%,BERT Contextual Sequence
+57,Bert Dim 42,bert_dim_42,0.000000,0.00%,BERT Contextual Sequence
+58,Bert Dim 45,bert_dim_45,0.000000,0.00%,BERT Contextual Sequence
+59,Bert Dim 55,bert_dim_55,0.000000,0.00%,BERT Contextual Sequence
+60,Bert Dim 24,bert_dim_24,0.000000,0.00%,BERT Contextual Sequence
+61,Bert Dim 26,bert_dim_26,0.000000,0.00%,BERT Contextual Sequence
+62,Bert Dim 27,bert_dim_27,0.000000,0.00%,BERT Contextual Sequence
+63,Bert Dim 28,bert_dim_28,0.000000,0.00%,BERT Contextual Sequence
+64,Bert Dim 17,bert_dim_17,0.000000,0.00%,BERT Contextual Sequence
+65,Bert Dim 18,bert_dim_18,0.000000,0.00%,BERT Contextual Sequence
+66,Bert Dim 22,bert_dim_22,0.000000,0.00%,BERT Contextual Sequence
+67,Bert Dim 21,bert_dim_21,0.000000,0.00%,BERT Contextual Sequence
+68,Bert Dim 11,bert_dim_11,0.000000,0.00%,BERT Contextual Sequence
+69,Bert Dim 14,bert_dim_14,0.000000,0.00%,BERT Contextual Sequence
+70,Bert Dim 13,bert_dim_13,0.000000,0.00%,BERT Contextual Sequence
+71,Bert Dim 12,bert_dim_12,0.000000,0.00%,BERT Contextual Sequence
+72,Bert Dim 08,bert_dim_08,0.000000,0.00%,BERT Contextual Sequence
+73,Bert Dim 09,bert_dim_09,0.000000,0.00%,BERT Contextual Sequence
+74,Bert Dim 10,bert_dim_10,0.000000,0.00%,BERT Contextual Sequence
+75,Bert Dim 06,bert_dim_06,0.000000,0.00%,BERT Contextual Sequence
+76,Bert Dim 04,bert_dim_04,0.000000,0.00%,BERT Contextual Sequence
+77,Bert Dim 05,bert_dim_05,0.000000,0.00%,BERT Contextual Sequence
+78,Bert Dim 02,bert_dim_02,0.000000,0.00%,BERT Contextual Sequence
+79,Bert Dim 00,bert_dim_00,0.000000,0.00%,BERT Contextual Sequence

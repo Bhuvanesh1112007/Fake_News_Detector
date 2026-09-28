@@ -1,0 +1,634 @@
+[
+  {
+    "rank": 1,
+    "feature": "Share Velocity Proxy",
+    "raw_name": "share_velocity_proxy",
+    "importance": 0.166667,
+    "importance_percent": 16.67,
+    "modality": "Network & Social Engagement"
+  },
+  {
+    "rank": 2,
+    "feature": "Bert Dim 23",
+    "raw_name": "bert_dim_23",
+    "importance": 0.146667,
+    "importance_percent": 14.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 3,
+    "feature": "Stylometric Exclamation Density",
+    "raw_name": "stylometric_exclamation_density",
+    "importance": 0.133333,
+    "importance_percent": 13.33,
+    "modality": "Stylometric Linguistic Density"
+  },
+  {
+    "rank": 4,
+    "feature": "Log Social Shares",
+    "raw_name": "log_social_shares",
+    "importance": 0.133333,
+    "importance_percent": 13.33,
+    "modality": "Network & Social Engagement"
+  },
+  {
+    "rank": 5,
+    "feature": "Hyper Virality Indicator",
+    "raw_name": "hyper_virality_indicator",
+    "importance": 0.06,
+    "importance_percent": 6.0,
+    "modality": "Network & Social Engagement"
+  },
+  {
+    "rank": 6,
+    "feature": "Bert Dim 52",
+    "raw_name": "bert_dim_52",
+    "importance": 0.046667,
+    "importance_percent": 4.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 7,
+    "feature": "Engagement Anomaly Score",
+    "raw_name": "engagement_anomaly_score",
+    "importance": 0.038889,
+    "importance_percent": 3.89,
+    "modality": "Network & Social Engagement"
+  },
+  {
+    "rank": 8,
+    "feature": "Emotional Intensity Score",
+    "raw_name": "emotional_intensity_score",
+    "importance": 0.031282,
+    "importance_percent": 3.13,
+    "modality": "Network & Social Engagement"
+  },
+  {
+    "rank": 9,
+    "feature": "Tld Trust Rating",
+    "raw_name": "tld_trust_rating",
+    "importance": 0.026667,
+    "importance_percent": 2.67,
+    "modality": "User & Publisher Credibility"
+  },
+  {
+    "rank": 10,
+    "feature": "Author Credential Score",
+    "raw_name": "author_credential_score",
+    "importance": 0.026667,
+    "importance_percent": 2.67,
+    "modality": "User & Publisher Credibility"
+  },
+  {
+    "rank": 11,
+    "feature": "Bert Dim 16",
+    "raw_name": "bert_dim_16",
+    "importance": 0.02,
+    "importance_percent": 2.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 12,
+    "feature": "Bert Dim 01",
+    "raw_name": "bert_dim_01",
+    "importance": 0.02,
+    "importance_percent": 2.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 13,
+    "feature": "Publisher Credibility Score",
+    "raw_name": "publisher_credibility_score",
+    "importance": 0.013333,
+    "importance_percent": 1.33,
+    "modality": "User & Publisher Credibility"
+  },
+  {
+    "rank": 14,
+    "feature": "Bert Dim 44",
+    "raw_name": "bert_dim_44",
+    "importance": 0.013333,
+    "importance_percent": 1.33,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 15,
+    "feature": "Bert Dim 30",
+    "raw_name": "bert_dim_30",
+    "importance": 0.007692,
+    "importance_percent": 0.77,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 16,
+    "feature": "Bert Dim 31",
+    "raw_name": "bert_dim_31",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 17,
+    "feature": "Bert Dim 29",
+    "raw_name": "bert_dim_29",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 18,
+    "feature": "Bert Dim 19",
+    "raw_name": "bert_dim_19",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 19,
+    "feature": "Bert Dim 03",
+    "raw_name": "bert_dim_03",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 20,
+    "feature": "Bert Dim 25",
+    "raw_name": "bert_dim_25",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 21,
+    "feature": "Bert Dim 15",
+    "raw_name": "bert_dim_15",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 22,
+    "feature": "Bert Dim 56",
+    "raw_name": "bert_dim_56",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 23,
+    "feature": "Bert Dim 62",
+    "raw_name": "bert_dim_62",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 24,
+    "feature": "Bert Dim 43",
+    "raw_name": "bert_dim_43",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 25,
+    "feature": "Bert Dim 40",
+    "raw_name": "bert_dim_40",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 26,
+    "feature": "Bert Dim 32",
+    "raw_name": "bert_dim_32",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 27,
+    "feature": "Bert Dim 20",
+    "raw_name": "bert_dim_20",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 28,
+    "feature": "Bert Dim 50",
+    "raw_name": "bert_dim_50",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 29,
+    "feature": "Bert Dim 48",
+    "raw_name": "bert_dim_48",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 30,
+    "feature": "Bert Dim 47",
+    "raw_name": "bert_dim_47",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 31,
+    "feature": "Bert Dim 60",
+    "raw_name": "bert_dim_60",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 32,
+    "feature": "Bert Dim 07",
+    "raw_name": "bert_dim_07",
+    "importance": 0.006667,
+    "importance_percent": 0.67,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 33,
+    "feature": "Bert Dim 57",
+    "raw_name": "bert_dim_57",
+    "importance": 0.001111,
+    "importance_percent": 0.11,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 34,
+    "feature": "Bert Dim 59",
+    "raw_name": "bert_dim_59",
+    "importance": 0.001026,
+    "importance_percent": 0.1,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 35,
+    "feature": "Is Pseudonymous Author",
+    "raw_name": "is_pseudonymous_author",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "User & Publisher Credibility"
+  },
+  {
+    "rank": 36,
+    "feature": "Stylometric Uppercase Ratio",
+    "raw_name": "stylometric_uppercase_ratio",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "Stylometric Linguistic Density"
+  },
+  {
+    "rank": 37,
+    "feature": "Stylometric Lexical Diversity",
+    "raw_name": "stylometric_lexical_diversity",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "Stylometric Linguistic Density"
+  },
+  {
+    "rank": 38,
+    "feature": "Journalistic Attribution Intensity",
+    "raw_name": "journalistic_attribution_intensity",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "User & Publisher Credibility"
+  },
+  {
+    "rank": 39,
+    "feature": "Sentiment Polarity Normalized",
+    "raw_name": "sentiment_polarity_normalized",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "Network & Social Engagement"
+  },
+  {
+    "rank": 40,
+    "feature": "Has Author Metadata",
+    "raw_name": "has_author_metadata",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "User & Publisher Credibility"
+  },
+  {
+    "rank": 41,
+    "feature": "Bert Dim 51",
+    "raw_name": "bert_dim_51",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 42,
+    "feature": "Bert Dim 54",
+    "raw_name": "bert_dim_54",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 43,
+    "feature": "Bert Dim 53",
+    "raw_name": "bert_dim_53",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 44,
+    "feature": "Bert Dim 49",
+    "raw_name": "bert_dim_49",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 45,
+    "feature": "Bert Dim 58",
+    "raw_name": "bert_dim_58",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 46,
+    "feature": "Bert Dim 63",
+    "raw_name": "bert_dim_63",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 47,
+    "feature": "Bert Dim 61",
+    "raw_name": "bert_dim_61",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 48,
+    "feature": "Bert Dim 33",
+    "raw_name": "bert_dim_33",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 49,
+    "feature": "Bert Dim 34",
+    "raw_name": "bert_dim_34",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 50,
+    "feature": "Bert Dim 35",
+    "raw_name": "bert_dim_35",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 51,
+    "feature": "Bert Dim 36",
+    "raw_name": "bert_dim_36",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 52,
+    "feature": "Bert Dim 38",
+    "raw_name": "bert_dim_38",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 53,
+    "feature": "Bert Dim 37",
+    "raw_name": "bert_dim_37",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 54,
+    "feature": "Bert Dim 39",
+    "raw_name": "bert_dim_39",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 55,
+    "feature": "Bert Dim 41",
+    "raw_name": "bert_dim_41",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 56,
+    "feature": "Bert Dim 46",
+    "raw_name": "bert_dim_46",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 57,
+    "feature": "Bert Dim 42",
+    "raw_name": "bert_dim_42",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 58,
+    "feature": "Bert Dim 45",
+    "raw_name": "bert_dim_45",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 59,
+    "feature": "Bert Dim 55",
+    "raw_name": "bert_dim_55",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 60,
+    "feature": "Bert Dim 24",
+    "raw_name": "bert_dim_24",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 61,
+    "feature": "Bert Dim 26",
+    "raw_name": "bert_dim_26",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 62,
+    "feature": "Bert Dim 27",
+    "raw_name": "bert_dim_27",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 63,
+    "feature": "Bert Dim 28",
+    "raw_name": "bert_dim_28",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 64,
+    "feature": "Bert Dim 17",
+    "raw_name": "bert_dim_17",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 65,
+    "feature": "Bert Dim 18",
+    "raw_name": "bert_dim_18",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 66,
+    "feature": "Bert Dim 22",
+    "raw_name": "bert_dim_22",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 67,
+    "feature": "Bert Dim 21",
+    "raw_name": "bert_dim_21",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 68,
+    "feature": "Bert Dim 11",
+    "raw_name": "bert_dim_11",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 69,
+    "feature": "Bert Dim 14",
+    "raw_name": "bert_dim_14",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 70,
+    "feature": "Bert Dim 13",
+    "raw_name": "bert_dim_13",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 71,
+    "feature": "Bert Dim 12",
+    "raw_name": "bert_dim_12",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 72,
+    "feature": "Bert Dim 08",
+    "raw_name": "bert_dim_08",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 73,
+    "feature": "Bert Dim 09",
+    "raw_name": "bert_dim_09",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 74,
+    "feature": "Bert Dim 10",
+    "raw_name": "bert_dim_10",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 75,
+    "feature": "Bert Dim 06",
+    "raw_name": "bert_dim_06",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 76,
+    "feature": "Bert Dim 04",
+    "raw_name": "bert_dim_04",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 77,
+    "feature": "Bert Dim 05",
+    "raw_name": "bert_dim_05",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 78,
+    "feature": "Bert Dim 02",
+    "raw_name": "bert_dim_02",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  },
+  {
+    "rank": 79,
+    "feature": "Bert Dim 00",
+    "raw_name": "bert_dim_00",
+    "importance": 0.0,
+    "importance_percent": 0.0,
+    "modality": "BERT Contextual Sequence"
+  }
+]

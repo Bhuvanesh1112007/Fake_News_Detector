@@ -1,0 +1,49 @@
+name: VeriShield AI - CI/CD Automated Verification
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+    - name: Checkout Code Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: 'pip'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Retrain AI Pipelines & Generate Artifacts
+      run: |
+        python -c "from src.preprocessing import run_preprocessing_pipeline; run_preprocessing_pipeline(); from src.user_features import run_user_feature_pipeline; run_user_feature_pipeline(); from src.network_features import run_network_feature_pipeline; run_network_feature_pipeline(); from src.feature_fusion import run_feature_fusion_pipeline; run_feature_fusion_pipeline(); from src.train_random_forest import run_random_forest_training_pipeline; run_random_forest_training_pipeline(); from src.evaluation import run_evaluation_pipeline; run_evaluation_pipeline(); from src.explainability import run_explainability_pipeline; run_explainability_pipeline()"
+
+    - name: Run Phase 12 Final System Validation Suite
+      run: |
+        python -m tests.test_final_system_validation
+
+    - name: Run Phase 11 Full-Stack REST API Integration Tests
+      run: |
+        python -m tests.test_webapp_integration
+
+    - name: Run Multi-Domain Extended Benchmark Tests
+      run: |
+        python -m tests.test_extended_benchmarks
+
+    - name: Run Core Model Diagnostic Tests
+      run: |
+        python -m tests.diagnose_model

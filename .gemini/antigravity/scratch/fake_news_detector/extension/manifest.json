@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "VeriShield AI - Real-Time Fake News & XAI Detector",
+  "version": "1.0.0",
+  "description": "79-Dimensional Multimodal Deep Learning & Explainable AI (SHAP) Browser Sidecar for instant news verification.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "VeriShield AI Detector"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

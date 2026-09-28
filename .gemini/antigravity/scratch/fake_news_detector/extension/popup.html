@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeriShield AI Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-row">
+        <div class="shield-icon">🛡️</div>
+        <div>
+          <h1 class="logo-title">VeriShield AI</h1>
+          <p class="logo-sub">79-Dim Multimodal XAI Detector</p>
+        </div>
+      </div>
+      <div class="badge-status" id="serverStatus">Checking Server...</div>
+    </header>
+
+    <!-- Tab Selector -->
+    <div class="tabs">
+      <button class="tab-btn active" id="tabTextBtn">Text Input</button>
+      <button class="tab-btn" id="tabUrlBtn">Verify URL</button>
+      <button class="tab-btn" id="tabPageBtn">Current Tab</button>
+    </div>
+
+    <!-- Mode: Text Input -->
+    <div class="tab-pane active" id="paneText">
+      <input type="text" id="newsTitle" placeholder="Headline / News Title..." class="input-field">
+      <textarea id="newsBody" placeholder="Article body text or social media claim..." rows="4" class="textarea-field"></textarea>
+    </div>
+
+    <!-- Mode: URL Input -->
+    <div class="tab-pane" id="paneUrl">
+      <input type="url" id="newsUrl" placeholder="https://www.example.com/news-article" class="input-field">
+      <p class="helper-text">Scrapes article title and body automatically for verification.</p>
+    </div>
+
+    <!-- Mode: Current Page -->
+    <div class="tab-pane" id="panePage">
+      <p class="helper-text" id="pageInfo">Click analyze to extract and verify the current active tab.</p>
+    </div>
+
+    <!-- Presets -->
+    <div class="presets-row">
+      <span class="preset-label">Presets:</span>
+      <button class="preset-btn" id="presetFake">Fake Scam</button>
+      <button class="preset-btn" id="presetReal">Real Study</button>
+    </div>
+
+    <!-- Action Button -->
+    <button class="action-btn" id="analyzeBtn">
+      <span id="btnText">Analyze Article</span>
+      <span id="btnSpinner" class="spinner hidden"></span>
+    </button>
+
+    <!-- Results Section -->
+    <div class="results-section hidden" id="resultsCard">
+      <div class="verdict-banner" id="verdictBanner">
+        <div class="verdict-label" id="verdictText">VERDICT</div>
+        <div class="confidence-label" id="confidenceText">0.0%</div>
+      </div>
+
+      <!-- Probability Bar -->
+      <div class="prob-bar-container">
+        <div class="prob-bar-fill" id="probBarFill"></div>
+      </div>
+      <div class="prob-labels">
+        <span id="realProbText">Real: 0%</span>
+        <span id="fakeProbText">Fake: 0%</span>
+      </div>
+
+      <!-- Risk Level -->
+      <div class="risk-badge" id="riskBadge">Risk Level</div>
+
+      <!-- XAI Heatmap -->
+      <div class="xai-header">Token Attribution Heatmap</div>
+      <div class="heatmap-box" id="heatmapBox"></div>
+
+      <!-- Key Reasons -->
+      <div class="xai-header">Key Forensic Reasons</div>
+      <ul class="reasons-list" id="reasonsList"></ul>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

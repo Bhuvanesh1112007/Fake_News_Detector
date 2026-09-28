@@ -1,0 +1,74 @@
+[
+  {
+    "configuration": "Full Multimodal (BERT + User + Network + Stylo)",
+    "feature_dimensions": 79,
+    "description": "Complete Architecture",
+    "test_accuracy": 1.0,
+    "test_f1": 1.0,
+    "test_roc_auc": 1.0,
+    "cv_accuracy_mean": 0.96,
+    "cv_accuracy_std": 0.08,
+    "inference_latency_ms": 0.475,
+    "training_time_sec": 0.0626
+  },
+  {
+    "configuration": "BERT Contextual Embeddings Only",
+    "feature_dimensions": 64,
+    "description": "Textual Sequence Only",
+    "test_accuracy": 0.7143,
+    "test_f1": 0.7024,
+    "test_roc_auc": 0.8333,
+    "cv_accuracy_mean": 0.88,
+    "cv_accuracy_std": 0.098,
+    "inference_latency_ms": 0.451,
+    "training_time_sec": 0.0632
+  },
+  {
+    "configuration": "User & Publisher Signals Only",
+    "feature_dimensions": 6,
+    "description": "Source Credibility Only",
+    "test_accuracy": 1.0,
+    "test_f1": 1.0,
+    "test_roc_auc": 1.0,
+    "cv_accuracy_mean": 0.96,
+    "cv_accuracy_std": 0.08,
+    "inference_latency_ms": 0.451,
+    "training_time_sec": 0.063
+  },
+  {
+    "configuration": "Network & Social Engagement Only",
+    "feature_dimensions": 6,
+    "description": "Diffusion Dynamics Only",
+    "test_accuracy": 1.0,
+    "test_f1": 1.0,
+    "test_roc_auc": 1.0,
+    "cv_accuracy_mean": 0.96,
+    "cv_accuracy_std": 0.08,
+    "inference_latency_ms": 0.469,
+    "training_time_sec": 0.065
+  },
+  {
+    "configuration": "Stylometric Linguistic Density Only",
+    "feature_dimensions": 3,
+    "description": "Shallow Linguistics Only",
+    "test_accuracy": 1.0,
+    "test_f1": 1.0,
+    "test_roc_auc": 1.0,
+    "cv_accuracy_mean": 1.0,
+    "cv_accuracy_std": 0.0,
+    "inference_latency_ms": 0.467,
+    "training_time_sec": 0.0658
+  },
+  {
+    "configuration": "Tabular Multi-Source Only (No BERT)",
+    "feature_dimensions": 15,
+    "description": "Non-Textual Metadata Only",
+    "test_accuracy": 1.0,
+    "test_f1": 1.0,
+    "test_roc_auc": 1.0,
+    "cv_accuracy_mean": 1.0,
+    "cv_accuracy_std": 0.0,
+    "inference_latency_ms": 0.463,
+    "training_time_sec": 0.0649
+  }
+]

@@ -1,0 +1,449 @@
+[
+  {
+    "prediction": "REAL",
+    "confidence_fake": 4.7,
+    "confidence_real": 95.3,
+    "top_features": [
+      {
+        "feature": "Bert Dim 23",
+        "raw_name": "bert_dim_23",
+        "impact": 0.1552,
+        "relative_influence_percent": 49.7,
+        "direction": "Pushes towards FAKE",
+        "value": -0.5585,
+        "modality": "BERT Contextual Sequence",
+        "is_bert": true
+      },
+      {
+        "feature": "Stylometric Exclamation Density",
+        "raw_name": "stylometric_exclamation_density",
+        "impact": 0.0667,
+        "relative_influence_percent": 21.4,
+        "direction": "Pushes towards FAKE",
+        "value": 0.0,
+        "modality": "Stylometric Linguistic Density",
+        "is_bert": false
+      },
+      {
+        "feature": "Hyper Virality Indicator",
+        "raw_name": "hyper_virality_indicator",
+        "impact": 0.03,
+        "relative_influence_percent": 9.6,
+        "direction": "Pushes towards FAKE",
+        "value": 0.0,
+        "modality": "Network & Social Engagement",
+        "is_bert": false
+      },
+      {
+        "feature": "Bert Dim 01",
+        "raw_name": "bert_dim_01",
+        "impact": 0.0226,
+        "relative_influence_percent": 7.2,
+        "direction": "Pushes towards FAKE",
+        "value": -0.6305,
+        "modality": "BERT Contextual Sequence",
+        "is_bert": true
+      },
+      {
+        "feature": "Engagement Anomaly Score",
+        "raw_name": "engagement_anomaly_score",
+        "impact": 0.0194,
+        "relative_influence_percent": 6.2,
+        "direction": "Pushes towards FAKE",
+        "value": 0.0,
+        "modality": "Network & Social Engagement",
+        "is_bert": false
+      },
+      {
+        "feature": "Log Social Shares",
+        "raw_name": "log_social_shares",
+        "impact": -0.0182,
+        "relative_influence_percent": 5.8,
+        "direction": "Pushes towards REAL",
+        "value": 0.6365,
+        "modality": "Network & Social Engagement",
+        "is_bert": false
+      }
+    ],
+    "token_attributions": [
+      {
+        "token": "NASA",
+        "score": -0.78,
+        "bert_attention_weight": 0.2,
+        "type": "real_signal"
+      },
+      {
+        "token": "James",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Webb",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Space",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Telescope",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Captures",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Distant",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Galaxy",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "According",
+        "score": -0.308,
+        "bert_attention_weight": 0.879,
+        "type": "real_signal"
+      },
+      {
+        "token": "to",
+        "score": -0.309,
+        "bert_attention_weight": 0.884,
+        "type": "real_signal"
+      },
+      {
+        "token": "a",
+        "score": -0.319,
+        "bert_attention_weight": 0.912,
+        "type": "real_signal"
+      },
+      {
+        "token": "press",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "release,",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "NASA",
+        "score": -0.78,
+        "bert_attention_weight": 0.2,
+        "type": "real_signal"
+      },
+      {
+        "token": "published",
+        "score": -0.78,
+        "bert_attention_weight": 0.884,
+        "type": "real_signal"
+      },
+      {
+        "token": "deep",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "spectroscopic",
+        "score": -0.78,
+        "bert_attention_weight": 0.2,
+        "type": "real_signal"
+      },
+      {
+        "token": "measurements",
+        "score": -0.78,
+        "bert_attention_weight": 0.2,
+        "type": "real_signal"
+      },
+      {
+        "token": "confirming",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "ancient",
+        "score": -0.321,
+        "bert_attention_weight": 0.918,
+        "type": "real_signal"
+      },
+      {
+        "token": "galactic",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "formations.",
+        "score": -0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      }
+    ],
+    "key_reasons": [
+      "Objective, formal vocabulary aligning with verified scientific, empirical, and institutional style.",
+      "Neutral emotional polarity and presence of verifiable journalistic attribution.",
+      "BERT multi-head self-attention indicates balanced contextual discourse and factual syntax."
+    ],
+    "input_title": "NASA James Webb Space Telescope Captures Distant Galaxy",
+    "expected_label": "REAL"
+  },
+  {
+    "prediction": "FAKE",
+    "confidence_fake": 80.0,
+    "confidence_real": 20.0,
+    "top_features": [
+      {
+        "feature": "Bert Dim 23",
+        "raw_name": "bert_dim_23",
+        "impact": -0.1576,
+        "relative_influence_percent": 42.3,
+        "direction": "Pushes towards REAL",
+        "value": -0.5748,
+        "modality": "BERT Contextual Sequence",
+        "is_bert": true
+      },
+      {
+        "feature": "Stylometric Exclamation Density",
+        "raw_name": "stylometric_exclamation_density",
+        "impact": 0.0667,
+        "relative_influence_percent": 17.9,
+        "direction": "Pushes towards FAKE",
+        "value": 1.0,
+        "modality": "Stylometric Linguistic Density",
+        "is_bert": false
+      },
+      {
+        "feature": "Share Velocity Proxy",
+        "raw_name": "share_velocity_proxy",
+        "impact": 0.0602,
+        "relative_influence_percent": 16.2,
+        "direction": "Pushes towards FAKE",
+        "value": 0.8613,
+        "modality": "Network & Social Engagement",
+        "is_bert": false
+      },
+      {
+        "feature": "Log Social Shares",
+        "raw_name": "log_social_shares",
+        "impact": 0.0352,
+        "relative_influence_percent": 9.5,
+        "direction": "Pushes towards FAKE",
+        "value": 0.7641,
+        "modality": "Network & Social Engagement",
+        "is_bert": false
+      },
+      {
+        "feature": "Hyper Virality Indicator",
+        "raw_name": "hyper_virality_indicator",
+        "impact": 0.03,
+        "relative_influence_percent": 8.1,
+        "direction": "Pushes towards FAKE",
+        "value": 1.0,
+        "modality": "Network & Social Engagement",
+        "is_bert": false
+      },
+      {
+        "feature": "Bert Dim 01",
+        "raw_name": "bert_dim_01",
+        "impact": -0.0228,
+        "relative_influence_percent": 6.1,
+        "direction": "Pushes towards REAL",
+        "value": -0.6388,
+        "modality": "BERT Contextual Sequence",
+        "is_bert": true
+      }
+    ],
+    "token_attributions": [
+      {
+        "token": "SHOCKING",
+        "score": 0.88,
+        "bert_attention_weight": 0.884,
+        "type": "fake_signal"
+      },
+      {
+        "token": "PROOF:",
+        "score": 0.5,
+        "bert_attention_weight": 0.844,
+        "type": "fake_signal"
+      },
+      {
+        "token": "Secret",
+        "score": 0.88,
+        "bert_attention_weight": 0.977,
+        "type": "fake_signal"
+      },
+      {
+        "token": "5G",
+        "score": 0.88,
+        "bert_attention_weight": 0.915,
+        "type": "fake_signal"
+      },
+      {
+        "token": "Mind",
+        "score": 0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Control",
+        "score": 0.269,
+        "bert_attention_weight": 0.77,
+        "type": "fake_signal"
+      },
+      {
+        "token": "Frequency",
+        "score": 0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "Leaked!",
+        "score": 0.88,
+        "bert_attention_weight": 0.918,
+        "type": "fake_signal"
+      },
+      {
+        "token": "Whistleblower",
+        "score": 0.88,
+        "bert_attention_weight": 0.916,
+        "type": "fake_signal"
+      },
+      {
+        "token": "reveals",
+        "score": 0.278,
+        "bert_attention_weight": 0.794,
+        "type": "fake_signal"
+      },
+      {
+        "token": "classified",
+        "score": 0.88,
+        "bert_attention_weight": 0.788,
+        "type": "fake_signal"
+      },
+      {
+        "token": "5G",
+        "score": 0.88,
+        "bert_attention_weight": 0.915,
+        "type": "fake_signal"
+      },
+      {
+        "token": "frequency",
+        "score": 0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "designed",
+        "score": 0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "to",
+        "score": 0.271,
+        "bert_attention_weight": 0.775,
+        "type": "fake_signal"
+      },
+      {
+        "token": "control",
+        "score": 0.269,
+        "bert_attention_weight": 0.77,
+        "type": "fake_signal"
+      },
+      {
+        "token": "population!",
+        "score": 0.45,
+        "bert_attention_weight": 0.2,
+        "type": "fake_signal"
+      },
+      {
+        "token": "Mind",
+        "score": 0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "control",
+        "score": 0.269,
+        "bert_attention_weight": 0.77,
+        "type": "fake_signal"
+      },
+      {
+        "token": "towers",
+        "score": 0.07,
+        "bert_attention_weight": 0.2,
+        "type": "neutral"
+      },
+      {
+        "token": "exposed!",
+        "score": 0.88,
+        "bert_attention_weight": 0.2,
+        "type": "fake_signal"
+      },
+      {
+        "token": "Share",
+        "score": 0.282,
+        "bert_attention_weight": 0.806,
+        "type": "fake_signal"
+      },
+      {
+        "token": "immediately",
+        "score": 0.273,
+        "bert_attention_weight": 0.781,
+        "type": "fake_signal"
+      },
+      {
+        "token": "before",
+        "score": 0.271,
+        "bert_attention_weight": 0.774,
+        "type": "fake_signal"
+      },
+      {
+        "token": "this",
+        "score": 0.278,
+        "bert_attention_weight": 0.793,
+        "type": "fake_signal"
+      },
+      {
+        "token": "is",
+        "score": 0.275,
+        "bert_attention_weight": 0.787,
+        "type": "fake_signal"
+      },
+      {
+        "token": "banned!",
+        "score": 0.88,
+        "bert_attention_weight": 0.877,
+        "type": "fake_signal"
+      }
+    ],
+    "key_reasons": [
+      "High density of sensationalist, unverified claim markers and clickbait terminology detected.",
+      "Stylometric signals detect elevated uppercase casing and hyperbolic punctuation intensity.",
+      "Network Diffusion Dynamics: Elevated virality cue flagged by Share Velocity Proxy.",
+      "BERT Transformer attention highlights syntactic patterns matching known misinformation narratives."
+    ],
+    "input_title": "SHOCKING PROOF: Secret 5G Mind Control Frequency Leaked!",
+    "expected_label": "FAKE"
+  }
+]

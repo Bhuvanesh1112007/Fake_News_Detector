@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  verishield-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: verishield-ai-server
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./results:/app/results
+      - ./prediction_history.db:/app/prediction_history.db
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

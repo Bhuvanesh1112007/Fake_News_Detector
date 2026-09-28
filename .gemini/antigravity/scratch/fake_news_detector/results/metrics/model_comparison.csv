@@ -1,0 +1,7 @@
+Model,Architecture Type,Accuracy,Precision (Weighted),Recall (Weighted),F1-Score (Weighted),F1-Score (Macro),ROC-AUC,Log Loss,CV Accuracy (Mean±Std),CV F1 (Mean±Std),Latency (ms/sample)
+Majority Class (Dummy),Baseline Machine Learning,57.1%,0.3265,0.5714,0.4156,0.3636,0.5000,15.4473,58.0±4.0%,0.427±0.047,0.01
+Naïve Bayes,Baseline Machine Learning,85.7%,0.8929,0.8571,0.8571,0.8571,0.8750,5.1491,82.0±22.3%,0.780±0.279,0.03
+Decision Tree,Baseline Machine Learning,100.0%,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,96.0±8.0%,0.956±0.088,0.02
+Logistic Regression,Baseline Machine Learning,85.7%,0.8857,0.8571,0.8508,0.8444,1.0000,0.3793,92.0±16.0%,0.890±0.220,0.04
+Support Vector Machine (RBF),Baseline Machine Learning,85.7%,0.8857,0.8571,0.8508,0.8444,1.0000,0.2031,92.0±16.0%,0.890±0.220,0.06
+Gradient Boosting (GBM),Baseline Machine Learning,100.0%,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,100.0±0.0%,1.000±0.000,0.07

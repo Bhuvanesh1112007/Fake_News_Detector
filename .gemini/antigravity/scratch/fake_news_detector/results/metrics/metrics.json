@@ -1,0 +1,175 @@
+{
+  "phase": "Phase 3: Baseline Models Training & Benchmark Comparison",
+  "random_seed": 42,
+  "evaluation_timestamp": "2026-09-28T03:20:26Z",
+  "baseline_metrics": {
+    "Majority Class (Dummy)": {
+      "accuracy": 0.5714,
+      "precision_weighted": 0.3265,
+      "precision_macro": 0.2857,
+      "recall_weighted": 0.5714,
+      "recall_macro": 0.5,
+      "f1_score": 0.4156,
+      "f1_score_macro": 0.3636,
+      "roc_auc": 0.5,
+      "log_loss": 15.4473,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "training_time_sec": 0.0002,
+      "inference_latency_ms": 0.006,
+      "cv_accuracy_mean": 0.58,
+      "cv_accuracy_std": 0.04,
+      "cv_f1_mean": 0.4267,
+      "cv_f1_std": 0.0467,
+      "architecture_type": "Baseline Machine Learning"
+    },
+    "Na\u00efve Bayes": {
+      "accuracy": 0.8571,
+      "precision_weighted": 0.8929,
+      "precision_macro": 0.875,
+      "recall_weighted": 0.8571,
+      "recall_macro": 0.875,
+      "f1_score": 0.8571,
+      "f1_score_macro": 0.8571,
+      "roc_auc": 0.875,
+      "log_loss": 5.1491,
+      "confusion_matrix": [
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "training_time_sec": 0.0009,
+      "inference_latency_ms": 0.031,
+      "cv_accuracy_mean": 0.82,
+      "cv_accuracy_std": 0.2227,
+      "cv_f1_mean": 0.78,
+      "cv_f1_std": 0.2794,
+      "architecture_type": "Baseline Machine Learning"
+    },
+    "Decision Tree": {
+      "accuracy": 1.0,
+      "precision_weighted": 1.0,
+      "precision_macro": 1.0,
+      "recall_weighted": 1.0,
+      "recall_macro": 1.0,
+      "f1_score": 1.0,
+      "f1_score_macro": 1.0,
+      "roc_auc": 1.0,
+      "log_loss": 0.0,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "training_time_sec": 0.0011,
+      "inference_latency_ms": 0.022,
+      "cv_accuracy_mean": 0.96,
+      "cv_accuracy_std": 0.08,
+      "cv_f1_mean": 0.9562,
+      "cv_f1_std": 0.0876,
+      "architecture_type": "Baseline Machine Learning"
+    },
+    "Logistic Regression": {
+      "accuracy": 0.8571,
+      "precision_weighted": 0.8857,
+      "precision_macro": 0.9,
+      "recall_weighted": 0.8571,
+      "recall_macro": 0.8333,
+      "f1_score": 0.8508,
+      "f1_score_macro": 0.8444,
+      "roc_auc": 1.0,
+      "log_loss": 0.3793,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "training_time_sec": 0.0046,
+      "inference_latency_ms": 0.037,
+      "cv_accuracy_mean": 0.92,
+      "cv_accuracy_std": 0.16,
+      "cv_f1_mean": 0.89,
+      "cv_f1_std": 0.22,
+      "architecture_type": "Baseline Machine Learning"
+    },
+    "Support Vector Machine (RBF)": {
+      "accuracy": 0.8571,
+      "precision_weighted": 0.8857,
+      "precision_macro": 0.9,
+      "recall_weighted": 0.8571,
+      "recall_macro": 0.8333,
+      "f1_score": 0.8508,
+      "f1_score_macro": 0.8444,
+      "roc_auc": 1.0,
+      "log_loss": 0.2031,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "training_time_sec": 0.0035,
+      "inference_latency_ms": 0.056,
+      "cv_accuracy_mean": 0.92,
+      "cv_accuracy_std": 0.16,
+      "cv_f1_mean": 0.89,
+      "cv_f1_std": 0.22,
+      "architecture_type": "Baseline Machine Learning"
+    },
+    "Gradient Boosting (GBM)": {
+      "accuracy": 1.0,
+      "precision_weighted": 1.0,
+      "precision_macro": 1.0,
+      "recall_weighted": 1.0,
+      "recall_macro": 1.0,
+      "f1_score": 1.0,
+      "f1_score_macro": 1.0,
+      "roc_auc": 1.0,
+      "log_loss": 0.0,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "training_time_sec": 0.0634,
+      "inference_latency_ms": 0.074,
+      "cv_accuracy_mean": 1.0,
+      "cv_accuracy_std": 0.0,
+      "cv_f1_mean": 1.0,
+      "cv_f1_std": 0.0,
+      "architecture_type": "Baseline Machine Learning"
+    }
+  }
+}

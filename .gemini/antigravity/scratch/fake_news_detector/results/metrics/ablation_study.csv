@@ -1,0 +1,7 @@
+configuration,feature_dimensions,description,test_accuracy,test_f1,test_roc_auc,cv_accuracy_mean,cv_accuracy_std,inference_latency_ms,training_time_sec
+Full Multimodal (BERT + User + Network + Stylo),79,Complete Architecture,1.0,1.0,1.0,0.96,0.08,0.475,0.0626
+BERT Contextual Embeddings Only,64,Textual Sequence Only,0.7143,0.7024,0.8333,0.88,0.098,0.451,0.0632
+User & Publisher Signals Only,6,Source Credibility Only,1.0,1.0,1.0,0.96,0.08,0.451,0.063
+Network & Social Engagement Only,6,Diffusion Dynamics Only,1.0,1.0,1.0,0.96,0.08,0.469,0.065
+Stylometric Linguistic Density Only,3,Shallow Linguistics Only,1.0,1.0,1.0,1.0,0.0,0.467,0.0658
+Tabular Multi-Source Only (No BERT),15,Non-Textual Metadata Only,1.0,1.0,1.0,1.0,0.0,0.463,0.0649

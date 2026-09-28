@@ -1,0 +1,8 @@
+model_name,category,accuracy,f1_score,precision,recall,roc_auc,cv_accuracy_mean,cv_accuracy_std,inference_latency_ms
+Majority Class (Dummy),Baseline,0.5714,0.4156,0.3265,0.5714,0.5,0.58,0.04,0.004
+Naïve Bayes,Baseline,0.8571,0.8571,0.8929,0.8571,0.875,0.82,0.2227,0.025
+Decision Tree,Baseline,1.0,1.0,1.0,1.0,1.0,0.96,0.08,0.014
+Logistic Regression,Baseline,0.8571,0.8508,0.8857,0.8571,1.0,0.92,0.16,0.035
+Support Vector Machine (RBF),Baseline,0.8571,0.8508,0.8857,0.8571,1.0,0.92,0.16,0.035
+Gradient Boosting (GBM),Baseline,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.035
+Proposed Multimodal RF (Ours),Proposed Method,1.0,1.0,1.0,1.0,1.0,0.96,0.08,0.662

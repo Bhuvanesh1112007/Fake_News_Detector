@@ -1,0 +1,397 @@
+[
+  {
+    "feature": "share_velocity_proxy",
+    "importance": 0.166667,
+    "rank": 1
+  },
+  {
+    "feature": "bert_dim_23",
+    "importance": 0.146667,
+    "rank": 2
+  },
+  {
+    "feature": "log_social_shares",
+    "importance": 0.133333,
+    "rank": 3
+  },
+  {
+    "feature": "stylometric_exclamation_density",
+    "importance": 0.133333,
+    "rank": 4
+  },
+  {
+    "feature": "hyper_virality_indicator",
+    "importance": 0.06,
+    "rank": 5
+  },
+  {
+    "feature": "bert_dim_52",
+    "importance": 0.046667,
+    "rank": 6
+  },
+  {
+    "feature": "engagement_anomaly_score",
+    "importance": 0.038889,
+    "rank": 7
+  },
+  {
+    "feature": "emotional_intensity_score",
+    "importance": 0.031282,
+    "rank": 8
+  },
+  {
+    "feature": "tld_trust_rating",
+    "importance": 0.026667,
+    "rank": 9
+  },
+  {
+    "feature": "author_credential_score",
+    "importance": 0.026667,
+    "rank": 10
+  },
+  {
+    "feature": "bert_dim_01",
+    "importance": 0.02,
+    "rank": 11
+  },
+  {
+    "feature": "bert_dim_16",
+    "importance": 0.02,
+    "rank": 12
+  },
+  {
+    "feature": "bert_dim_44",
+    "importance": 0.013333,
+    "rank": 13
+  },
+  {
+    "feature": "publisher_credibility_score",
+    "importance": 0.013333,
+    "rank": 14
+  },
+  {
+    "feature": "bert_dim_30",
+    "importance": 0.007692,
+    "rank": 15
+  },
+  {
+    "feature": "bert_dim_03",
+    "importance": 0.006667,
+    "rank": 16
+  },
+  {
+    "feature": "bert_dim_07",
+    "importance": 0.006667,
+    "rank": 17
+  },
+  {
+    "feature": "bert_dim_15",
+    "importance": 0.006667,
+    "rank": 18
+  },
+  {
+    "feature": "bert_dim_19",
+    "importance": 0.006667,
+    "rank": 19
+  },
+  {
+    "feature": "bert_dim_20",
+    "importance": 0.006667,
+    "rank": 20
+  },
+  {
+    "feature": "bert_dim_25",
+    "importance": 0.006667,
+    "rank": 21
+  },
+  {
+    "feature": "bert_dim_29",
+    "importance": 0.006667,
+    "rank": 22
+  },
+  {
+    "feature": "bert_dim_31",
+    "importance": 0.006667,
+    "rank": 23
+  },
+  {
+    "feature": "bert_dim_32",
+    "importance": 0.006667,
+    "rank": 24
+  },
+  {
+    "feature": "bert_dim_40",
+    "importance": 0.006667,
+    "rank": 25
+  },
+  {
+    "feature": "bert_dim_43",
+    "importance": 0.006667,
+    "rank": 26
+  },
+  {
+    "feature": "bert_dim_47",
+    "importance": 0.006667,
+    "rank": 27
+  },
+  {
+    "feature": "bert_dim_48",
+    "importance": 0.006667,
+    "rank": 28
+  },
+  {
+    "feature": "bert_dim_50",
+    "importance": 0.006667,
+    "rank": 29
+  },
+  {
+    "feature": "bert_dim_56",
+    "importance": 0.006667,
+    "rank": 30
+  },
+  {
+    "feature": "bert_dim_60",
+    "importance": 0.006667,
+    "rank": 31
+  },
+  {
+    "feature": "bert_dim_62",
+    "importance": 0.006667,
+    "rank": 32
+  },
+  {
+    "feature": "bert_dim_57",
+    "importance": 0.001111,
+    "rank": 33
+  },
+  {
+    "feature": "bert_dim_59",
+    "importance": 0.001026,
+    "rank": 34
+  },
+  {
+    "feature": "bert_dim_00",
+    "importance": 0.0,
+    "rank": 35
+  },
+  {
+    "feature": "bert_dim_02",
+    "importance": 0.0,
+    "rank": 36
+  },
+  {
+    "feature": "bert_dim_04",
+    "importance": 0.0,
+    "rank": 37
+  },
+  {
+    "feature": "bert_dim_05",
+    "importance": 0.0,
+    "rank": 38
+  },
+  {
+    "feature": "bert_dim_06",
+    "importance": 0.0,
+    "rank": 39
+  },
+  {
+    "feature": "bert_dim_08",
+    "importance": 0.0,
+    "rank": 40
+  },
+  {
+    "feature": "bert_dim_09",
+    "importance": 0.0,
+    "rank": 41
+  },
+  {
+    "feature": "bert_dim_10",
+    "importance": 0.0,
+    "rank": 42
+  },
+  {
+    "feature": "bert_dim_11",
+    "importance": 0.0,
+    "rank": 43
+  },
+  {
+    "feature": "bert_dim_12",
+    "importance": 0.0,
+    "rank": 44
+  },
+  {
+    "feature": "bert_dim_13",
+    "importance": 0.0,
+    "rank": 45
+  },
+  {
+    "feature": "bert_dim_14",
+    "importance": 0.0,
+    "rank": 46
+  },
+  {
+    "feature": "bert_dim_17",
+    "importance": 0.0,
+    "rank": 47
+  },
+  {
+    "feature": "bert_dim_18",
+    "importance": 0.0,
+    "rank": 48
+  },
+  {
+    "feature": "bert_dim_21",
+    "importance": 0.0,
+    "rank": 49
+  },
+  {
+    "feature": "bert_dim_22",
+    "importance": 0.0,
+    "rank": 50
+  },
+  {
+    "feature": "bert_dim_24",
+    "importance": 0.0,
+    "rank": 51
+  },
+  {
+    "feature": "bert_dim_26",
+    "importance": 0.0,
+    "rank": 52
+  },
+  {
+    "feature": "bert_dim_27",
+    "importance": 0.0,
+    "rank": 53
+  },
+  {
+    "feature": "bert_dim_28",
+    "importance": 0.0,
+    "rank": 54
+  },
+  {
+    "feature": "bert_dim_33",
+    "importance": 0.0,
+    "rank": 55
+  },
+  {
+    "feature": "bert_dim_34",
+    "importance": 0.0,
+    "rank": 56
+  },
+  {
+    "feature": "bert_dim_35",
+    "importance": 0.0,
+    "rank": 57
+  },
+  {
+    "feature": "bert_dim_36",
+    "importance": 0.0,
+    "rank": 58
+  },
+  {
+    "feature": "bert_dim_37",
+    "importance": 0.0,
+    "rank": 59
+  },
+  {
+    "feature": "bert_dim_38",
+    "importance": 0.0,
+    "rank": 60
+  },
+  {
+    "feature": "bert_dim_39",
+    "importance": 0.0,
+    "rank": 61
+  },
+  {
+    "feature": "bert_dim_41",
+    "importance": 0.0,
+    "rank": 62
+  },
+  {
+    "feature": "bert_dim_42",
+    "importance": 0.0,
+    "rank": 63
+  },
+  {
+    "feature": "bert_dim_45",
+    "importance": 0.0,
+    "rank": 64
+  },
+  {
+    "feature": "bert_dim_46",
+    "importance": 0.0,
+    "rank": 65
+  },
+  {
+    "feature": "bert_dim_49",
+    "importance": 0.0,
+    "rank": 66
+  },
+  {
+    "feature": "bert_dim_51",
+    "importance": 0.0,
+    "rank": 67
+  },
+  {
+    "feature": "bert_dim_53",
+    "importance": 0.0,
+    "rank": 68
+  },
+  {
+    "feature": "bert_dim_54",
+    "importance": 0.0,
+    "rank": 69
+  },
+  {
+    "feature": "bert_dim_55",
+    "importance": 0.0,
+    "rank": 70
+  },
+  {
+    "feature": "bert_dim_58",
+    "importance": 0.0,
+    "rank": 71
+  },
+  {
+    "feature": "bert_dim_61",
+    "importance": 0.0,
+    "rank": 72
+  },
+  {
+    "feature": "bert_dim_63",
+    "importance": 0.0,
+    "rank": 73
+  },
+  {
+    "feature": "has_author_metadata",
+    "importance": 0.0,
+    "rank": 74
+  },
+  {
+    "feature": "is_pseudonymous_author",
+    "importance": 0.0,
+    "rank": 75
+  },
+  {
+    "feature": "journalistic_attribution_intensity",
+    "importance": 0.0,
+    "rank": 76
+  },
+  {
+    "feature": "sentiment_polarity_normalized",
+    "importance": 0.0,
+    "rank": 77
+  },
+  {
+    "feature": "stylometric_uppercase_ratio",
+    "importance": 0.0,
+    "rank": 78
+  },
+  {
+    "feature": "stylometric_lexical_diversity",
+    "importance": 0.0,
+    "rank": 79
+  }
+]

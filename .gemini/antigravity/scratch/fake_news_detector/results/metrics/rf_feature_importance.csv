@@ -1,0 +1,80 @@
+Rank,Feature Name,MDI Importance Weight,Modality
+1,share_velocity_proxy,0.166667,Network & Social Engagement
+2,bert_dim_23,0.146667,BERT Contextual Embedding
+3,log_social_shares,0.133333,Network & Social Engagement
+4,stylometric_exclamation_density,0.133333,Stylometric Linguistic Density
+5,hyper_virality_indicator,0.060000,Network & Social Engagement
+6,bert_dim_52,0.046667,BERT Contextual Embedding
+7,engagement_anomaly_score,0.038889,Network & Social Engagement
+8,emotional_intensity_score,0.031282,Network & Social Engagement
+9,tld_trust_rating,0.026667,User & Publisher Credibility
+10,author_credential_score,0.026667,User & Publisher Credibility
+11,bert_dim_01,0.020000,BERT Contextual Embedding
+12,bert_dim_16,0.020000,BERT Contextual Embedding
+13,bert_dim_44,0.013333,BERT Contextual Embedding
+14,publisher_credibility_score,0.013333,User & Publisher Credibility
+15,bert_dim_30,0.007692,BERT Contextual Embedding
+16,bert_dim_03,0.006667,BERT Contextual Embedding
+17,bert_dim_07,0.006667,BERT Contextual Embedding
+18,bert_dim_15,0.006667,BERT Contextual Embedding
+19,bert_dim_19,0.006667,BERT Contextual Embedding
+20,bert_dim_20,0.006667,BERT Contextual Embedding
+21,bert_dim_25,0.006667,BERT Contextual Embedding
+22,bert_dim_29,0.006667,BERT Contextual Embedding
+23,bert_dim_31,0.006667,BERT Contextual Embedding
+24,bert_dim_32,0.006667,BERT Contextual Embedding
+25,bert_dim_40,0.006667,BERT Contextual Embedding
+26,bert_dim_43,0.006667,BERT Contextual Embedding
+27,bert_dim_47,0.006667,BERT Contextual Embedding
+28,bert_dim_48,0.006667,BERT Contextual Embedding
+29,bert_dim_50,0.006667,BERT Contextual Embedding
+30,bert_dim_56,0.006667,BERT Contextual Embedding
+31,bert_dim_60,0.006667,BERT Contextual Embedding
+32,bert_dim_62,0.006667,BERT Contextual Embedding
+33,bert_dim_57,0.001111,BERT Contextual Embedding
+34,bert_dim_59,0.001026,BERT Contextual Embedding
+35,bert_dim_00,0.000000,BERT Contextual Embedding
+36,bert_dim_02,0.000000,BERT Contextual Embedding
+37,bert_dim_04,0.000000,BERT Contextual Embedding
+38,bert_dim_05,0.000000,BERT Contextual Embedding
+39,bert_dim_06,0.000000,BERT Contextual Embedding
+40,bert_dim_08,0.000000,BERT Contextual Embedding
+41,bert_dim_09,0.000000,BERT Contextual Embedding
+42,bert_dim_10,0.000000,BERT Contextual Embedding
+43,bert_dim_11,0.000000,BERT Contextual Embedding
+44,bert_dim_12,0.000000,BERT Contextual Embedding
+45,bert_dim_13,0.000000,BERT Contextual Embedding
+46,bert_dim_14,0.000000,BERT Contextual Embedding
+47,bert_dim_17,0.000000,BERT Contextual Embedding
+48,bert_dim_18,0.000000,BERT Contextual Embedding
+49,bert_dim_21,0.000000,BERT Contextual Embedding
+50,bert_dim_22,0.000000,BERT Contextual Embedding
+51,bert_dim_24,0.000000,BERT Contextual Embedding
+52,bert_dim_26,0.000000,BERT Contextual Embedding
+53,bert_dim_27,0.000000,BERT Contextual Embedding
+54,bert_dim_28,0.000000,BERT Contextual Embedding
+55,bert_dim_33,0.000000,BERT Contextual Embedding
+56,bert_dim_34,0.000000,BERT Contextual Embedding
+57,bert_dim_35,0.000000,BERT Contextual Embedding
+58,bert_dim_36,0.000000,BERT Contextual Embedding
+59,bert_dim_37,0.000000,BERT Contextual Embedding
+60,bert_dim_38,0.000000,BERT Contextual Embedding
+61,bert_dim_39,0.000000,BERT Contextual Embedding
+62,bert_dim_41,0.000000,BERT Contextual Embedding
+63,bert_dim_42,0.000000,BERT Contextual Embedding
+64,bert_dim_45,0.000000,BERT Contextual Embedding
+65,bert_dim_46,0.000000,BERT Contextual Embedding
+66,bert_dim_49,0.000000,BERT Contextual Embedding
+67,bert_dim_51,0.000000,BERT Contextual Embedding
+68,bert_dim_53,0.000000,BERT Contextual Embedding
+69,bert_dim_54,0.000000,BERT Contextual Embedding
+70,bert_dim_55,0.000000,BERT Contextual Embedding
+71,bert_dim_58,0.000000,BERT Contextual Embedding
+72,bert_dim_61,0.000000,BERT Contextual Embedding
+73,bert_dim_63,0.000000,BERT Contextual Embedding
+74,has_author_metadata,0.000000,User & Publisher Credibility
+75,is_pseudonymous_author,0.000000,User & Publisher Credibility
+76,journalistic_attribution_intensity,0.000000,User & Publisher Credibility
+77,sentiment_polarity_normalized,0.000000,Network & Social Engagement
+78,stylometric_uppercase_ratio,0.000000,Stylometric Linguistic Density
+79,stylometric_lexical_diversity,0.000000,Stylometric Linguistic Density

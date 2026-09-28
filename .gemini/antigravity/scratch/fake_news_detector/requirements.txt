@@ -1,0 +1,20 @@
+# Core Numerical & Data Processing
+numpy>=1.24.0
+scipy>=1.11.0
+pandas>=2.0.0
+
+# Machine Learning & NLP
+scikit-learn>=1.3.0
+joblib>=1.3.0
+spacy>=3.8.0
+
+# Web Application & API Frameworks
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic>=2.0.0
+
+# Optional Visualization & Explainability
+# (Installed when plotting backend is configured)
+# matplotlib>=3.7.0
+# seaborn>=0.12.0
+# shap>=0.42.0
